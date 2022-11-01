@@ -1,6 +1,3 @@
-from asyncio.proactor_events import _ProactorDuplexPipeTransport
-
-
 def soma_imposto(taxa_imposto, custo):
     imposto = taxa_imposto / 100
     custo += custo * imposto
