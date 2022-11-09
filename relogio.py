@@ -1,15 +1,14 @@
 def mostra_horas(hora, minuto, modelo):
-    if modelo in 'Aa':
-        relogio = f"{hora}:{minuto} AM"
-    else:
-        relogio = f"{hora}:{minuto} PM"
 
+    relogio = f"{hora}:{minuto} {modelo}"
     return relogio
 
 def converter_horas(hora, minuto, modelo):
     if modelo in 'Aa':
+        modelo = 'AM'
         hora = hora
     else:
+        modelo = 'PM'
         hora = hora - 12
     
     return mostra_horas(hora, minuto, modelo)
